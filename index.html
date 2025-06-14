@@ -11,7 +11,7 @@
       background-color: #0071c5; /* Intel blue */
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #fff; /* White text for contrast */
+      color: #fff; /* White text for high contrast */
     }
 
     /* Header section styles */
@@ -130,6 +130,87 @@
         min-width: 0;
         max-width: 100%;
       }
+    }
+
+    /* New styles for Bootstrap-like grid */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .col-md-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+    .mb-4 {
+      margin-bottom: 1.5rem!important;
+    }
+    .mt-5 {
+      margin-top: 3rem!important;
+    }
+    .p-3 {
+      padding: 1rem!important;
+    }
+    .border {
+      border: 1px solid #dee2e6!important;
+    }
+    .bg-light {
+      background-color: #f8f9fa!important;
+    }
+    .text-center {
+      text-align: center!important;
+    }
+
+    /* Example: High-contrast section for beginners */
+    /* Set a dark blue background for strong contrast */
+    body {
+      background-color: #003366; /* Very dark blue */
+      color: #fff;               /* White text for high contrast */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* Header with white background and dark blue text */
+    header {
+      background-color: #fff;    /* White background */
+      color: #003366;            /* Dark blue text */
+      text-align: center;
+      padding: 30px 0 20px 0;
+    }
+
+    /* Example card with white background and dark text */
+    .card {
+      background-color: #fff;    /* White background */
+      color: #222;               /* Very dark text for readability */
+      border-radius: 8px;
+      padding: 16px;
+      margin: 20px auto;
+      max-width: 340px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    /* Simple Footer Section with High Contrast */
+    footer {
+      background-color: #003366; /* Very dark blue */
+      color: #fff;                /* White text for high contrast */
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    footer nav a {
+      margin: 0 10px;
+      color: #ffeb3b; /* Bright yellow for contrast */
+      text-decoration: none;
     }
   </style>
 </head>
@@ -303,5 +384,66 @@
     </div>
   </section>
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Three-column layout using Bootstrap -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- First column: Newsletter subscription box -->
+      <div class="col-12 col-md-4 mb-4">
+        <!-- Newsletter Subscription Form -->
+        <h2 class="mb-3 text-center">Subscribe to Intel’s Sustainability Newsletter</h2>
+        <form>
+          <!-- Email input field -->
+          <div class="mb-3">
+            <label for="newsletterEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter your email">
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+      <!-- Second column: Footer content -->
+      <div class="col-12 col-md-4 mb-4">
+        <!-- Footer section in the middle column -->
+        <footer>
+          <!-- Navigation links -->
+          <nav>
+            <!-- Placeholder links for navigation -->
+            <a href="#" style="color: #0071c5; text-decoration: none; margin: 0 8px;">Privacy Policy</a>
+            <a href="#" style="color: #0071c5; text-decoration: none; margin: 0 8px;">Terms of Use</a>
+            <a href="#" style="color: #0071c5; text-decoration: none; margin: 0 8px;">Contact</a>
+          </nav>
+          <!-- Copyright notice -->
+          <p style="color: #222; margin-top: 10px; font-size: 0.95em;">
+            &copy; 2025 Intel Corporation. All rights reserved.
+          </p>
+        </footer>
+      </div>
+      <!-- Third column -->
+      <div class="col-12 col-md-4 mb-4">
+        <!-- You can put any content here -->
+        <p>Column 3 content</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple Footer Section with High Contrast -->
+  <footer style="background-color: #003366; /* Very dark blue */
+                 color: #fff;                /* White text for high contrast */
+                 padding: 20px 0;
+                 text-align: center;
+                 margin-top: 40px;">
+    <!-- Navigation links -->
+    <nav>
+      <!-- Placeholder links for navigation -->
+      <a href="#" style="margin: 0 10px; color: #ffeb3b; text-decoration: none;">Privacy Policy</a>
+      <a href="#" style="margin: 0 10px; color: #ffeb3b; text-decoration: none;">Terms of Use</a>
+      <a href="#" style="margin: 0 10px; color: #ffeb3b; text-decoration: none;">Contact</a>
+    </nav>
+    <!-- Copyright notice -->
+    <p style="margin-top: 10px; font-size: 0.95em;">
+      &copy; 2025 Intel Corporation. All rights reserved.
+    </p>
+  </footer>
 </body>
 </html>
